@@ -11,4 +11,18 @@ public class Book extends Product {
     public String getAuthor() {
         return author;
     }
+
+    @Override
+    public boolean matches(String search) {
+        if (super.matches(search)) {
+            if (getName().contains(search)) {
+                return getName().contains(search);
+            }
+            return true;
+        }
+        if (getAuthor().contains(search)) {
+            return getAuthor().contains(search);
+        }
+        return false;
+    }
 }
