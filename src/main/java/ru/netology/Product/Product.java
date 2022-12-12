@@ -24,4 +24,11 @@ public abstract class Product {
         return price;
     }
 
+    public boolean matches(String search) {
+        if (getName().contains(search)) {
+            return getName().contains(search);
+        }
+        return false;
+    }
+
 }
